@@ -1,4 +1,4 @@
-
+package Week01;
 // No importing allowed in this lecture
 // E.g.) import java.util.*;
 // It only works with sorted array
