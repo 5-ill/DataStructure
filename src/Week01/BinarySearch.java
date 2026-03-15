@@ -28,7 +28,7 @@ public class BinarySearch {
 
         while(left <= right)
         {
-            // Be careful for the overflow
+            // Caution : overflow
             // mid = left + (right-left) / 2 is also good!
             int mid = (left + right) / 2;
 
