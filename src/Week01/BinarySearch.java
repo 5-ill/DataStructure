@@ -25,7 +25,6 @@ public class BinarySearch {
         int left = 0;
         int right = array.length - 1;
 
-
         while(left <= right)
         {
             // Caution : overflow
@@ -43,12 +42,4 @@ public class BinarySearch {
         }
         return -1;
     }
-
-
-
-
-
-
-
-
 }
