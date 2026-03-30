@@ -33,6 +33,19 @@ public class LinkedList {
         return (first==null);
     }
 
+    public int size()
+    {
+        int count = 0;
+        Node cur = first;
+        while (cur != null)
+        {
+            count++;
+            cur = cur.next;
+        }
+        return count;
+    }
+
+
     // Add new Node at the first
     // Works even when list is empty
     public void insertAtFirst(int data)
@@ -59,6 +72,34 @@ public class LinkedList {
             return retVal;
         }
     }
+    public int deleteLast()
+    {
+        int retVal;
+        if (isEmpty())
+        {
+            return -1;
+        }
+        else
+        {
+            if (first.next==null)
+            {
+                retVal = first.data;
+                first = null;
+                return retVal;
+            }
+
+            Node cur = first;
+            while (cur.next.next!=null)
+            {
+                cur = cur.next;
+            }
+            retVal = cur.next.data;
+            cur.next = null;
+        }
+        return retVal;
+    }
+
+
     // Display all the value
     public void displayAll()
     {
@@ -71,20 +112,19 @@ public class LinkedList {
     }
     public void insertAtLast(int data)
     {
-        Node cur = first;
         Node node = new Node(data);
-        node.next = null;
+        if (isEmpty())
+        {
+            first = node;
+            return;
+        }
+        Node cur = first;
         while (cur.next != null)
         {
             cur = cur.next;
         }
         cur.next = node;
     }
-
-
-
-
-
 }
 
 
