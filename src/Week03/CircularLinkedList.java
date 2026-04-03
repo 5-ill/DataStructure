@@ -1,6 +1,7 @@
 package Week03;
 
 import Week02.Node;
+// You can just make new static node class inside the CircularLinkedList class
 
 public class CircularLinkedList {
 
