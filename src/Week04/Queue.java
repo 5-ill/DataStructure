@@ -10,9 +10,11 @@ public class Queue {
         llist=  new LinkedList();
     }
 
-    public void enqueue(int x)
+    /* Logically, using insertAtLast function in enqueue function, and using deleteLast function in dequeue function is correct.
+    However, since deleteLast function must search from beginning to last node, it is more efficient to use this way(below) */
+    public void enqueue(int data)
     {
-        llist.insertAtLast(x);
+        llist.insertAtLast(data);
     }
 
     public int dequeue()
